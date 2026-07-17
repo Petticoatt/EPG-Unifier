@@ -1,0 +1,1046 @@
+{
+  "settings": {
+    "future_days": 7,
+    "past_hours": 6,
+    "request_timeout_seconds": 180,
+    "download_workers": 3,
+    "retries": 3,
+    "stale_if_error_hours": 72,
+    "minimum_source_success_ratio": 0.65,
+    "maximum_channel_drop_ratio": 0.3,
+    "maximum_programme_drop_ratio": 0.45,
+    "user_agent": "epg-unifier/1.0 (+https://github.com/OWNER/REPOSITORY)",
+    "logo_api": {
+      "enabled": true,
+      "url": "https://iptv-org.github.io/api/logos.json",
+      "refresh_hours": 24
+    }
+  },
+  "outputs": [
+    {
+      "name": "global",
+      "filename": "epg.xml",
+      "include_regions": [
+        "*"
+      ]
+    },
+    {
+      "name": "united-states",
+      "filename": "epg-us.xml",
+      "include_regions": [
+        "us"
+      ]
+    },
+    {
+      "name": "canada",
+      "filename": "epg-ca.xml",
+      "include_regions": [
+        "canada"
+      ]
+    },
+    {
+      "name": "brazil",
+      "filename": "epg-br.xml",
+      "include_regions": [
+        "brazil"
+      ]
+    },
+    {
+      "name": "europe",
+      "filename": "epg-europe.xml",
+      "include_regions": [
+        "europe"
+      ]
+    },
+    {
+      "name": "asia-pacific",
+      "filename": "epg-asia-pacific.xml",
+      "include_regions": [
+        "asia-pacific"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "name": "iptv_epg_au",
+      "url": "https://iptv-epg.org/files/epg-au.xml.gz",
+      "priority": 1,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 0
+    },
+    {
+      "name": "iptv_epg_br",
+      "url": "https://iptv-epg.org/files/epg-br.xml.gz",
+      "priority": 1,
+      "region": "brazil",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "name": "iptv_epg_ca",
+      "url": "https://iptv-epg.org/files/epg-ca.xml.gz",
+      "priority": 1,
+      "region": "canada",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 2
+    },
+    {
+      "name": "iptv_epg_fr",
+      "url": "https://iptv-epg.org/files/epg-fr.xml.gz",
+      "priority": 1,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 3
+    },
+    {
+      "name": "iptv_epg_de",
+      "url": "https://iptv-epg.org/files/epg-de.xml.gz",
+      "priority": 1,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 4
+    },
+    {
+      "name": "iptv_epg_is",
+      "url": "https://iptv-epg.org/files/epg-is.xml.gz",
+      "priority": 1,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 5
+    },
+    {
+      "name": "iptv_epg_in",
+      "url": "https://iptv-epg.org/files/epg-in.xml.gz",
+      "priority": 1,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 6
+    },
+    {
+      "name": "iptv_epg_it",
+      "url": "https://iptv-epg.org/files/epg-it.xml.gz",
+      "priority": 1,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 7
+    },
+    {
+      "name": "iptv_epg_nl",
+      "url": "https://iptv-epg.org/files/epg-nl.xml.gz",
+      "priority": 1,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 8
+    },
+    {
+      "name": "iptv_epg_nz",
+      "url": "https://iptv-epg.org/files/epg-nz.xml.gz",
+      "priority": 1,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 9
+    },
+    {
+      "name": "iptv_epg_no",
+      "url": "https://iptv-epg.org/files/epg-no.xml.gz",
+      "priority": 1,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 10
+    },
+    {
+      "name": "iptv_epg_pt",
+      "url": "https://iptv-epg.org/files/epg-pt.xml.gz",
+      "priority": 1,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 11
+    },
+    {
+      "name": "iptv_epg_ru",
+      "url": "https://iptv-epg.org/files/epg-ru.xml.gz",
+      "priority": 1,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 12
+    },
+    {
+      "name": "iptv_epg_sg",
+      "url": "https://iptv-epg.org/files/epg-sg.xml.gz",
+      "priority": 1,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 13
+    },
+    {
+      "name": "iptv_epg_es",
+      "url": "https://iptv-epg.org/files/epg-es.xml.gz",
+      "priority": 1,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 14
+    },
+    {
+      "name": "iptv_epg_gb",
+      "url": "https://iptv-epg.org/files/epg-gb.xml.gz",
+      "priority": 1,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 15
+    },
+    {
+      "name": "iptv_epg_us",
+      "url": "https://iptv-epg.org/files/epg-us.xml.gz",
+      "priority": 1,
+      "region": "us",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 16
+    },
+    {
+      "name": "open_australia",
+      "url": "https://www.open-epg.com/files/australia.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 17
+    },
+    {
+      "name": "open_brazil1",
+      "url": "https://www.open-epg.com/files/brazil1.xml.gz",
+      "priority": 2,
+      "region": "brazil",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 18
+    },
+    {
+      "name": "open_brazil2",
+      "url": "https://www.open-epg.com/files/brazil2.xml.gz",
+      "priority": 2,
+      "region": "brazil",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 19
+    },
+    {
+      "name": "open_brazil3",
+      "url": "https://www.open-epg.com/files/brazil3.xml.gz",
+      "priority": 2,
+      "region": "brazil",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 20
+    },
+    {
+      "name": "open_brazil4",
+      "url": "https://www.open-epg.com/files/brazil4.xml.gz",
+      "priority": 2,
+      "region": "brazil",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 21
+    },
+    {
+      "name": "open_brazil5",
+      "url": "https://www.open-epg.com/files/brazil5.xml.gz",
+      "priority": 2,
+      "region": "brazil",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 22
+    },
+    {
+      "name": "open_canada",
+      "url": "https://www.open-epg.com/files/canada.xml.gz",
+      "priority": 2,
+      "region": "canada",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 23
+    },
+    {
+      "name": "open_france1",
+      "url": "https://www.open-epg.com/files/france1.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 24
+    },
+    {
+      "name": "open_france2",
+      "url": "https://www.open-epg.com/files/france2.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 25
+    },
+    {
+      "name": "open_france3",
+      "url": "https://www.open-epg.com/files/france3.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 26
+    },
+    {
+      "name": "open_germany",
+      "url": "https://www.open-epg.com/files/germany.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 27
+    },
+    {
+      "name": "open_iceland1",
+      "url": "https://www.open-epg.com/files/iceland1.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 28
+    },
+    {
+      "name": "open_iceland2",
+      "url": "https://www.open-epg.com/files/iceland2.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 29
+    },
+    {
+      "name": "open_iceland3",
+      "url": "https://www.open-epg.com/files/iceland3.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 30
+    },
+    {
+      "name": "open_india",
+      "url": "https://www.open-epg.com/files/india.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 31
+    },
+    {
+      "name": "open_ireland",
+      "url": "https://www.open-epg.com/files/ireland.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 32
+    },
+    {
+      "name": "open_italy1",
+      "url": "https://www.open-epg.com/files/italy1.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 33
+    },
+    {
+      "name": "open_italy2",
+      "url": "https://www.open-epg.com/files/italy2.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 34
+    },
+    {
+      "name": "open_italy3",
+      "url": "https://www.open-epg.com/files/italy3.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 35
+    },
+    {
+      "name": "open_italy4",
+      "url": "https://www.open-epg.com/files/italy4.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 36
+    },
+    {
+      "name": "open_italy5",
+      "url": "https://www.open-epg.com/files/italy5.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 37
+    },
+    {
+      "name": "open_italy6",
+      "url": "https://www.open-epg.com/files/italy6.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 38
+    },
+    {
+      "name": "open_italy7",
+      "url": "https://www.open-epg.com/files/italy7.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 39
+    },
+    {
+      "name": "open_italy8",
+      "url": "https://www.open-epg.com/files/italy8.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 40
+    },
+    {
+      "name": "open_netherlands",
+      "url": "https://www.open-epg.com/files/netherlands.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 41
+    },
+    {
+      "name": "open_newzealand1",
+      "url": "https://www.open-epg.com/files/newzealand1.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 42
+    },
+    {
+      "name": "open_newzealand2",
+      "url": "https://www.open-epg.com/files/newzealand2.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 43
+    },
+    {
+      "name": "open_norway1",
+      "url": "https://www.open-epg.com/files/norway1.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 44
+    },
+    {
+      "name": "open_norway2",
+      "url": "https://www.open-epg.com/files/norway2.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 45
+    },
+    {
+      "name": "open_portugal1",
+      "url": "https://www.open-epg.com/files/portugal1.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 46
+    },
+    {
+      "name": "open_portugal2",
+      "url": "https://www.open-epg.com/files/portugal2.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 47
+    },
+    {
+      "name": "open_russia1",
+      "url": "https://www.open-epg.com/files/russia1.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 48
+    },
+    {
+      "name": "open_russia2",
+      "url": "https://www.open-epg.com/files/russia2.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 49
+    },
+    {
+      "name": "open_russia3",
+      "url": "https://www.open-epg.com/files/russia3.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 50
+    },
+    {
+      "name": "open_singapore1",
+      "url": "https://www.open-epg.com/files/singapore1.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 51
+    },
+    {
+      "name": "open_singapore2",
+      "url": "https://www.open-epg.com/files/singapore2.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 52
+    },
+    {
+      "name": "open_singapore3",
+      "url": "https://www.open-epg.com/files/singapore3.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 53
+    },
+    {
+      "name": "open_spain1",
+      "url": "https://www.open-epg.com/files/spain1.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 54
+    },
+    {
+      "name": "open_spain2",
+      "url": "https://www.open-epg.com/files/spain2.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 55
+    },
+    {
+      "name": "open_spain3",
+      "url": "https://www.open-epg.com/files/spain3.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 56
+    },
+    {
+      "name": "open_spain4",
+      "url": "https://www.open-epg.com/files/spain4.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 57
+    },
+    {
+      "name": "open_spain5",
+      "url": "https://www.open-epg.com/files/spain5.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 58
+    },
+    {
+      "name": "open_spain6",
+      "url": "https://www.open-epg.com/files/spain6.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 59
+    },
+    {
+      "name": "open_spain7",
+      "url": "https://www.open-epg.com/files/spain7.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 60
+    },
+    {
+      "name": "open_sports1",
+      "url": "https://www.open-epg.com/files/sports1.xml.gz",
+      "priority": 2,
+      "region": "global",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 61
+    },
+    {
+      "name": "open_sports4",
+      "url": "https://www.open-epg.com/files/sports4.xml.gz",
+      "priority": 2,
+      "region": "global",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 62
+    },
+    {
+      "name": "open_sports5",
+      "url": "https://www.open-epg.com/files/sports5.xml.gz",
+      "priority": 2,
+      "region": "global",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 63
+    },
+    {
+      "name": "open_unitedkingdom",
+      "url": "https://www.open-epg.com/files/unitedkingdom.xml.gz",
+      "priority": 2,
+      "region": "europe",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 64
+    },
+    {
+      "name": "open_unitedstates10",
+      "url": "https://www.open-epg.com/files/unitedstates10.xml.gz",
+      "priority": 2,
+      "region": "us",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 65
+    },
+    {
+      "name": "open_unitedstates11",
+      "url": "https://www.open-epg.com/files/unitedstates11.xml.gz",
+      "priority": 2,
+      "region": "us",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 66
+    },
+    {
+      "name": "open_unitedstates3",
+      "url": "https://www.open-epg.com/files/unitedstates3.xml.gz",
+      "priority": 2,
+      "region": "us",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 67
+    },
+    {
+      "name": "open_unitedstates4",
+      "url": "https://www.open-epg.com/files/unitedstates4.xml.gz",
+      "priority": 2,
+      "region": "us",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 68
+    },
+    {
+      "name": "open_unitedstates5",
+      "url": "https://www.open-epg.com/files/unitedstates5.xml.gz",
+      "priority": 2,
+      "region": "us",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 69
+    },
+    {
+      "name": "open_unitedstates6",
+      "url": "https://www.open-epg.com/files/unitedstates6.xml.gz",
+      "priority": 2,
+      "region": "us",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 70
+    },
+    {
+      "name": "open_unitedstates7",
+      "url": "https://www.open-epg.com/files/unitedstates7.xml.gz",
+      "priority": 2,
+      "region": "us",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 71
+    },
+    {
+      "name": "open_unitedstates8",
+      "url": "https://www.open-epg.com/files/unitedstates8.xml.gz",
+      "priority": 2,
+      "region": "us",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 72
+    },
+    {
+      "name": "open_unitedstates9",
+      "url": "https://www.open-epg.com/files/unitedstates9.xml.gz",
+      "priority": 2,
+      "region": "us",
+      "refresh_hours": 24,
+      "enabled": true,
+      "order": 73
+    },
+    {
+      "name": "mjh_binge",
+      "url": "https://i.mjh.nz/Binge/epg.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 74
+    },
+    {
+      "name": "mjh_foxtel",
+      "url": "https://i.mjh.nz/Foxtel/epg.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 75
+    },
+    {
+      "name": "mjh_dstv_za",
+      "url": "https://i.mjh.nz/DStv/za.xml.gz",
+      "priority": 2,
+      "region": "africa",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 76
+    },
+    {
+      "name": "mjh_kayo",
+      "url": "https://i.mjh.nz/Kayo/epg.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 77
+    },
+    {
+      "name": "mjh_metv",
+      "url": "https://i.mjh.nz/MeTV/epg.xml.gz",
+      "priority": 2,
+      "region": "us",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 78
+    },
+    {
+      "name": "mjh_pbs_all",
+      "url": "https://i.mjh.nz/PBS/all.xml.gz",
+      "priority": 2,
+      "region": "us",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 79
+    },
+    {
+      "name": "mjh_plex_all",
+      "url": "https://i.mjh.nz/Plex/all.xml.gz",
+      "priority": 2,
+      "region": "global",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 80
+    },
+    {
+      "name": "mjh_plutotv_all",
+      "url": "https://i.mjh.nz/PlutoTV/all.xml.gz",
+      "priority": 2,
+      "region": "global",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 81
+    },
+    {
+      "name": "mjh_roku_all",
+      "url": "https://i.mjh.nz/Roku/all.xml.gz",
+      "priority": 2,
+      "region": "global",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 82
+    },
+    {
+      "name": "mjh_samsungtvplus_all",
+      "url": "https://i.mjh.nz/SamsungTVPlus/all.xml.gz",
+      "priority": 2,
+      "region": "global",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 83
+    },
+    {
+      "name": "mjh_singtel",
+      "url": "https://i.mjh.nz/Singtel/epg.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 84
+    },
+    {
+      "name": "mjh_skygo",
+      "url": "https://i.mjh.nz/SkyGo/epg.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 85
+    },
+    {
+      "name": "mjh_skysportnow",
+      "url": "https://i.mjh.nz/SkySportNow/epg.xml.gz",
+      "priority": 2,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 86
+    },
+    {
+      "name": "mjh_world",
+      "url": "https://i.mjh.nz/world/epg.xml.gz",
+      "priority": 2,
+      "region": "global",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 87
+    },
+    {
+      "name": "mjh_hgtv_go",
+      "url": "https://i.mjh.nz/hgtv_go/epg.xml.gz",
+      "priority": 2,
+      "region": "global",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 88
+    },
+    {
+      "name": "epgshare_au1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz",
+      "priority": 3,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 89
+    },
+    {
+      "name": "epgshare_br1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
+      "priority": 3,
+      "region": "brazil",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 90
+    },
+    {
+      "name": "epgshare_br2",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
+      "priority": 3,
+      "region": "brazil",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 91
+    },
+    {
+      "name": "epgshare_ca2",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz",
+      "priority": 3,
+      "region": "canada",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 92
+    },
+    {
+      "name": "epgshare_fr1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz",
+      "priority": 3,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 93
+    },
+    {
+      "name": "epgshare_de1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz",
+      "priority": 3,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 94
+    },
+    {
+      "name": "epgshare_ie1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_IE1.xml.gz",
+      "priority": 3,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 95
+    },
+    {
+      "name": "epgshare_it1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz",
+      "priority": 3,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 96
+    },
+    {
+      "name": "epgshare_nl1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz",
+      "priority": 3,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 97
+    },
+    {
+      "name": "epgshare_nz1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_NZ1.xml.gz",
+      "priority": 3,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 98
+    },
+    {
+      "name": "epgshare_no1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_NO1.xml.gz",
+      "priority": 3,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 99
+    },
+    {
+      "name": "epgshare_pt1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_PT1.xml.gz",
+      "priority": 3,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 100
+    },
+    {
+      "name": "epgshare_sg1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_SG1.xml.gz",
+      "priority": 3,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 101
+    },
+    {
+      "name": "epgshare_es1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz",
+      "priority": 3,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 102
+    },
+    {
+      "name": "epgshare_uk1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
+      "priority": 3,
+      "region": "europe",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 103
+    },
+    {
+      "name": "epgshare_us2",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+      "priority": 3,
+      "region": "us",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 104
+    },
+    {
+      "name": "epgshare_us_locals1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_US_LOCALS1.xml.gz",
+      "priority": 3,
+      "region": "us",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 105
+    },
+    {
+      "name": "epgshare_us_sports1",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_US_SPORTS1.xml.gz",
+      "priority": 3,
+      "region": "us",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 106
+    },
+    {
+      "name": "mjh_all",
+      "url": "https://i.mjh.nz/all/epg.xml.gz",
+      "priority": 3,
+      "region": "global",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 107
+    },
+    {
+      "name": "mjh_au_all",
+      "url": "https://i.mjh.nz/au/all/epg.xml.gz",
+      "priority": 3,
+      "region": "asia-pacific",
+      "refresh_hours": 6,
+      "enabled": true,
+      "order": 108
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[Unit]
+Description=Build merged XMLTV EPG
+After=network-online.target docker.service
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/epg-unifier
+ExecStart=/usr/bin/docker compose run --rm epg-unifier
+TimeoutStartSec=6h

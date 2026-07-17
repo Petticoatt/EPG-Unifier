@@ -1,0 +1,11 @@
+[Unit]
+Description=Build merged XMLTV EPG every six hours
+
+[Timer]
+OnCalendar=*-*-* 00,06,12,18:17:00 UTC
+Persistent=true
+RandomizedDelaySec=10m
+Unit=epg-unifier.service
+
+[Install]
+WantedBy=timers.target

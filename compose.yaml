@@ -1,0 +1,8 @@
+services:
+  epg-unifier:
+    build: .
+    restart: "no"
+    environment:
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    volumes:
+      - ./data:/data

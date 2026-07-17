@@ -1,0 +1,5 @@
+{$EPG_DOMAIN} {
+    root * /srv
+    header Cache-Control "no-cache, must-revalidate"
+    file_server
+}
