@@ -1,0 +1,8 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+data/cache/*
+!data/cache/.gitkeep
+data/output/*
+!data/output/.gitkeep
